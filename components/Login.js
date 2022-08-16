@@ -11,7 +11,6 @@ export default function Login() {
   // console.log(session);
   function handleClick() {
     signIn();
-    location.href = 'https://bambooshoots.herokuapp.com/account';
   }
 
   return (

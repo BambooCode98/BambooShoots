@@ -33,7 +33,7 @@ export default function Photos({userSession}) {
                 return(
                   <>
                     <Link href={`/account/photo/${imgID}`} key={imgID}>
-                      <a>
+                      <a className='cursor-pointer hover:opacity-80 object-cover w-80 h-72 transition duration-300 ease-in-out'>
                         <img src={source} alt="" className='cursor-pointer hover:opacity-80 object-cover w-80 h-72 transition duration-300 ease-in-out'/>
                         
                       </a>
