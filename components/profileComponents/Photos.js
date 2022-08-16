@@ -21,7 +21,7 @@ export default function Photos({userSession}) {
       <div>
       </div>
       <div className='sm:w-full'>
-        <div className='grid sm:h-screen grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 p-2 overflow-auto'>
+        <div className='grid sm:h-screen grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 p-2 sm:p-0 overflow-auto'>
           {images? 
             images.map(image => {
               // console.log(image.id);
@@ -33,7 +33,7 @@ export default function Photos({userSession}) {
                 return(
                   <>
                     <Link href={`/account/photo/${imgID}`} key={imgID}>
-                      <a className='cursor-pointer hover:opacity-80 object-cover w-80 h-72 transition duration-300 ease-in-out'>
+                      <a className=''>
                         <img src={source} alt="" className='cursor-pointer hover:opacity-80 object-cover w-80 h-72 transition duration-300 ease-in-out'/>
                         
                       </a>
