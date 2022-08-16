@@ -9,14 +9,17 @@ export default function Login() {
   const [loggingIn, setLoggingIn] = useState(true)
   // const {data:session} = useSession();
   // console.log(session);
-
+  function handleClick() {
+    signIn();
+    location.href = 'https://bambooshoots.herokuapp.com/account';
+  }
 
   return (
     <>
       <Layout>
         <h1 className='text-4xl font-bold sm:text-5xl md:text-7xl bg-green-700/[0.85] w-screen text-center p-1 border-solid border-t-4 border-b-4 border-green-900 select-none'>BambooShoots</h1>
 
-        <button onClick={() => signIn()} className='text-4xl font-bold select-none p-2 mt-16 rounded-md cursor-pointer bg-green-700/[0.85] border-solid border-t-4 border-4 border-green-900 md:hover:scale-105'>{loggingIn ? 'Login' : 'Register'}</button>
+        <button onClick={() => handleClick()} className='text-4xl font-bold select-none p-2 mt-16 rounded-md cursor-pointer bg-green-700/[0.85] border-solid border-t-4 border-4 border-green-900 md:hover:scale-105'>{loggingIn ? 'Login' : 'Register'}</button>
 
         {/* <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email...' className='border-solid border-black border-2 p-1'></input>
 
