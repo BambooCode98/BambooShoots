@@ -49,7 +49,7 @@ export default function ProfilePage() {
         <div className=''>
           {/* <h1 className='border-2 h-16 w-32 text-center text-xl'>Profile</h1> */}
           <p className='fixed top-0 m-3 right-0 bg-gray-800 text-green-400 p-2 rounded-md w-3/4 sm:w-1/4 md:w-1/5 md:h-1/12 lg:w-1/4 text-center'>Logged in as <span className='font-bold'>{session.user.name}</span> from {session.user.email}</p>
-          <button onClick={() => signOut({callbackUrl: 'http://localhost:3000'})} className='hover:md:scale-105 border-2 border-black m-3 p-3 duration-300 bg-gray-800 text-green-400 font-bold rounded-lg w-[120px] fixed z-40 bottom-0 right-0 cursor-pointer'>Sign Out</button>
+          <button onClick={() => signOut({callbackUrl: 'https://bambooshoots.herokuapp.com'})} className='hover:md:scale-105 border-2 border-black m-3 p-3 duration-300 bg-gray-800 text-green-400 font-bold rounded-lg w-[120px] fixed z-40 bottom-0 right-0 cursor-pointer'>Sign Out</button>
 
         </div>
         <div className='sm:top-0 sm:left-0 sm:absolute sm:w-full sm:h-full sm:pl-16 sm:pt-5 flex flex-col gap-5 '>
