@@ -52,7 +52,7 @@ export default function ProfileLayout({children}) {
           console.log(reader.error);
         }
       });
-      location.href='https://bambooshoots.herokuapp.com//account/photo';    
+      location.href='https://bambooshoots.herokuapp.com/account/photo';    
     }
   }
 
