@@ -22,6 +22,7 @@ export default function Home() {
         <div className=''>
           <ProfileLayout/>
         </div>
+        <p className='absolute top-0 left-1/2 p-9'>Highlights: Coming Soon!</p>
       </>
     )
   } else {
