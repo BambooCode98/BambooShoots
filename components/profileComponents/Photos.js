@@ -20,7 +20,7 @@ export default function Photos({userSession}) {
     <>
       <div>
       </div>
-      <div className='sm:w-full'>
+      <div className='sm:w-full sm:overflow-auto'>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 p-2 overflow-auto'>
           {images? 
             images.map(image => {
