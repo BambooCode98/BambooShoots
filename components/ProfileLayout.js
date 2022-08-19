@@ -40,7 +40,7 @@ export default function ProfileLayout({children}) {
       fileInput.forEach(async file => {
         let reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = () => {
+        reader.onload = async () => {
           let imageBinary = reader.result;
           await fetch('/api/postUserPhotos',{
             method: 'POST',
