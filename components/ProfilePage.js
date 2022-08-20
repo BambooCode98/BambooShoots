@@ -19,16 +19,16 @@ export default function ProfilePage() {
     fileInput.forEach(async file => {
       let reader = new FileReader();
       reader.readAsDataURL(file);
-      reader.onload = () => {
+      reader.onload = async () => {
         // setImageBinary(reader.result)
         let imageBinary = reader.result;
-        fetch('/api/changeuserpic', {
+        await fetch('/api/changeuserpic', {
           method: 'POST',
           body: imageBinary
         })
         
       }
-      reader.onerror = () => {
+      reader.onerror = async () => {
         console.log(reader.error);
       }
     });

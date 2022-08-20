@@ -36,7 +36,7 @@ export default function ProfileLayout({children}) {
     } else {
       setFileSelected(true);
       e.preventDefault();
-      console.log(fileInput);
+      // console.log(fileInput);
       fileInput.forEach(async file => {
         let reader = new FileReader();
         reader.readAsDataURL(file);
