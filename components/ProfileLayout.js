@@ -51,6 +51,8 @@ export default function ProfileLayout({children}) {
           }).then(() => {
             setfinishUploading(true);
             setFiles([]);
+            setSelectedFiles(false);
+
           })
           
         }
