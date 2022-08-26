@@ -48,7 +48,9 @@ export default function ProfileLayout({children}) {
           await fetch('/api/postUserPhotos',{
             method: 'POST',
             body: imageBinary
-          }).then(() => {setfinishUploading(true)})
+          }).then(() => {
+            setfinishUploading(true);
+          })
           
         }
         reader.onerror = (error) => {
@@ -56,7 +58,8 @@ export default function ProfileLayout({children}) {
           setReaderError(error);
         }
       });
-      // location.href='https://bamboo-shoots.vercel.app/account/photo';    
+      // location.href='https://bamboo-shoots.vercel.app/account/photo';  
+      finishUploading ? window.location.reload() : null;  
     }
   }
 
@@ -70,7 +73,6 @@ export default function ProfileLayout({children}) {
     e.preventDefault();
   }
 
-  
   
   if(session) {
     return (
