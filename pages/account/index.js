@@ -21,7 +21,9 @@ export default function AccountHome() {
         <div className=''>
           <ProfileLayout/>
         </div>
-        <p className='absolute top-0 left-1/2 p-9'>Highlights: Coming Soon!</p>
+        <div className='absolute top-0 left-1/2 p-9'>Highlights: Coming Soon!
+          <p>Click on the menu profile icon in the upper left to get started!</p>  
+        </div>
       </>
     )
   } else if(!session) {
