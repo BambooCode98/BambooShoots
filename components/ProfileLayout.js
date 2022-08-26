@@ -49,9 +49,9 @@ export default function ProfileLayout({children}) {
             method: 'POST',
             body: imageBinary
           }).then(() => {setfinishUploading(true)})
-          // .then( res => {
-          //   res? location.href='https://bamboo-shoots.vercel.app/account/photo' : null;
-          // })
+          .then( res => {
+            res? location.href='https://bamboo-shoots.vercel.app/account/photo' : null;
+          })
         }
         reader.onerror = (error) => {
           // console.log(reader.error);
