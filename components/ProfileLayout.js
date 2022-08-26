@@ -50,6 +50,7 @@ export default function ProfileLayout({children}) {
             body: imageBinary
           }).then(() => {
             setfinishUploading(true);
+            setFiles();
           })
           
         }
@@ -58,8 +59,9 @@ export default function ProfileLayout({children}) {
           setReaderError(error);
         }
       });
-       
-      finishUploading ? location.href='https://bamboo-shoots.vercel.app/account/photo' : null;  
+      setTimeout(() => {
+        setfinishUploading(false);
+      }, 1500);
     }
   }
 
