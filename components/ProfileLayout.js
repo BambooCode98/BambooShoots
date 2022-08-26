@@ -138,7 +138,7 @@ export default function ProfileLayout({children}) {
             <button type='submit' className='border-l-2 sm:border-t-0 border-black pl-1 sm:pl-2 lg:pl-2 hover:text-gray-400 transition duration-300 ease-in-out'>Upload Photos </button>
             </form>
             { fileSelected ? null : <p className='absolute text-red-500 top-1/2 rounded-md'>Please Select An Image.</p> }
-            <div className='overflow-auto text-xs sm:text-sm h-1/3 sm:h-4/6 md:h-2/6 lg:h-4/6'>
+            <div className='overflow-auto text-xs sm:text-sm h-1/3 sm:h-4/6 md:h-2/6 lg:h-2/6'>
               {selectedFiles ? fileInput.map(file => {
                 let fileName = file.name;
                 return (
