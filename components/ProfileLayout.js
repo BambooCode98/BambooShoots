@@ -9,6 +9,8 @@ import defaultPic from '../images/circle-user-solid.svg';
 let noDisplay = 'w-0 h-screen fixed sm:relative flex-wrap flex flex-col sm:w-0 lg:w-0 md:text-xl px-0 py-2 lg:w-0 lg:pr-0 gap-0 md:border-r-0 border-black select-none sm:pt-20 justify-center sm:justify-start text-white bg-gray-800 z-40 duration-300 -translate-x-[250px] ease-in overflow-x-hidden';
 let showDisplay = 'w-screen h-full sm:h-screen fixed sm:relative flex-wrap flex flex-col sm:w-2/5 md:w-3/5 lg:w-1/3 md:text-xl px-4 py-2 lg:pr-2 gap-5 md:border-r-2 border-black select-none sm:pt-20 justify-center sm:justify-start text-white bg-gray-800 z-40 duration-300 translate-x-0 ease-in ';
 
+let showUploadClear = 'absolute block text-green-500 duration-300 top-0 left-1/3';
+let closeUploadClear = 'hidden';
 
 
 
@@ -19,7 +21,7 @@ export default function ProfileLayout({children}) {
   const [profilePicture, setProfilePicture] = useState(true);
   const [selectedFiles, setSelectedFiles] = useState(false);
   const [fileSelected, setFileSelected] = useState(true)
-  const [readerError, setReaderError] =  useState()
+  const [finshUploading, setfinishUploading] =  useState(false)
 
   function userDisplay() {
     if(modalDisplay === noDisplay) {
@@ -46,8 +48,10 @@ export default function ProfileLayout({children}) {
           await fetch('/api/postUserPhotos',{
             method: 'POST',
             body: imageBinary
-          })
-          
+          }).then(() => {setfinishUploading(true)})
+          // .then( res => {
+          //   res? location.href='https://bamboo-shoots.vercel.app/account/photo' : null;
+          // })
         }
         reader.onerror = (error) => {
           // console.log(reader.error);
@@ -87,6 +91,7 @@ export default function ProfileLayout({children}) {
             </div>
           </div>
           <div className={modalDisplay}>
+            <p className={finishUploading ? showUploadClear : closeUploadClear}>Upload Successful</p>
             <Link href='/account'>
               <a>
                 <h1 className='cursor-pointer flex gap-2 text-green-400 w-auto sm:w-auto justify-center text-2xl md:text-4xl font-bold border-b-2 border-y-2 border-black'>BambooShoots
@@ -144,7 +149,6 @@ export default function ProfileLayout({children}) {
             {children}
           </div>
         </div>
-        {/* <p className='absolute top-2/5 left-3/5'>{readerError}</p> */}
       </>
     )
   } else {
