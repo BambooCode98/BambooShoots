@@ -63,7 +63,7 @@ export default function ProfileLayout({children}) {
       setTimeout(() => {
         setfinishUploading(false);
         setSelectedFiles(false);
-      }, 1500);
+      }, 3500);
     }
   }
 
