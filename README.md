@@ -2,7 +2,7 @@
 
 This is a basic photo uploading site that allows users to login/logout. While logged in a user can upload photos onto the site in a similar manner to Google Photos. The photos can also be deleted by clicking on a picture to view it in a new webpage, and clicking on the trash can icon.
 
-Currently hosted at Vercel: [BambooShoots](https://bamboo-shoots.vercel.ap/account/profile)
+Currently hosted at Vercel: [BambooShoots](https://bamboo-shoots.vercel.app)
 
 #### Current Problems(In Deployment Only)
 
