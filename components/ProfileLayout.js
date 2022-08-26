@@ -50,7 +50,7 @@ export default function ProfileLayout({children}) {
             body: imageBinary
           }).then(() => {
             setfinishUploading(true);
-            setFiles();
+            setFiles([]);
           })
           
         }
