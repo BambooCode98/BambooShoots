@@ -1,4 +1,4 @@
-import { prisma } from "./lib/prisma.ts";
+import { prisma } from "lib/prisma.ts";
 import React from 'react'
 import Picture from '../../../components/Picture';
 import { useSession, status } from 'next-auth/react';
