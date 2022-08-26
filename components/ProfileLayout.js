@@ -53,7 +53,7 @@ export default function ProfileLayout({children}) {
           setReaderError(error);
         }
       });
-      location.href='https://bamboo-shoots.vercel.app/account/photo';    
+      // location.href='https://bamboo-shoots.vercel.app/account/photo';    
     }
   }
 
