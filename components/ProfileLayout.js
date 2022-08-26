@@ -46,9 +46,8 @@ export default function ProfileLayout({children}) {
           await fetch('/api/postUserPhotos',{
             method: 'POST',
             body: imageBinary
-          }).then( res => {
-            res? location.href='https://bamboo-shoots.vercel.app/account/photo' : null;
           })
+          
         }
         reader.onerror = (error) => {
           // console.log(reader.error);
