@@ -19,6 +19,7 @@ export default function ProfileLayout({children}) {
   const [profilePicture, setProfilePicture] = useState(true);
   const [selectedFiles, setSelectedFiles] = useState(false);
   const [fileSelected, setFileSelected] = useState(true)
+  const [readerError, setReaderError] =  useState()
 
   function userDisplay() {
     if(modalDisplay === noDisplay) {
@@ -48,7 +49,8 @@ export default function ProfileLayout({children}) {
           })
         }
         reader.onerror = () => {
-          console.log(reader.error);
+          // console.log(reader.error);
+          setReaderError(reader.error);
         }
       });
       location.href='https://bamboo-shoots.vercel.app/account/photo';    
@@ -141,6 +143,7 @@ export default function ProfileLayout({children}) {
             {children}
           </div>
         </div>
+        <p className='absolute top-2/5 left-3/5'>{readerError}</p>
       </>
     )
   } else {

@@ -28,7 +28,7 @@ export default function Picture({image}) {
       method: 'DELETE',
       body: imgId
     })
-    location.href = 'https://bambooshoots.herokuapp.com/account/photo'
+    location.href = 'https://bamboo-shoots.vercel.app/account/photo'
   }
 
   return (
