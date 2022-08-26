@@ -2,11 +2,9 @@ import NextAuth from "next-auth"
 import GithubProvider from "next-auth/providers/github"
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client"
+import { prisma } from "./lib/prisma.ts";
 import { NextAuthOptions } from 'next-auth'
-// import EmailProvider from "next-auth/providers/email"
 
-const prisma = new PrismaClient();
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),

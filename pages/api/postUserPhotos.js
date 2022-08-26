@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "./lib/prisma.ts";
 import { getSession } from "next-auth/react";
-const prisma = new PrismaClient();
 
 
 //needed by nextjs to set request size limit

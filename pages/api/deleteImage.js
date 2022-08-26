@@ -1,8 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "./lib/prisma.ts";
 import { getSession } from "next-auth/react";
 
-
-const prisma = new PrismaClient();
 
 export default async function deleteUserPhotos(req,res) {
 

@@ -1,10 +1,9 @@
-import { PrismaClient } from '@prisma/client';
+import { prisma } from "./lib/prisma.ts";
 import React from 'react'
 import Picture from '../../../components/Picture';
 import { useSession, status } from 'next-auth/react';
 
 
-const prisma = new PrismaClient();
 
 export default function PicID({image}) {
   const {data: session} = useSession();
