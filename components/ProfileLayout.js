@@ -93,7 +93,7 @@ export default function ProfileLayout({children}) {
             </div>
           </div>
           <div className={modalDisplay}>
-            <p className={finishUploading ? showUploadClear : closeUploadClear}>Upload Successful</p>
+            <p className={finishUploading ? showUploadClear : closeUploadClear}>Upload Successful, Refresh Page to view photos!</p>
             <Link href='/account'>
               <a>
                 <h1 className='cursor-pointer flex gap-2 text-green-400 w-auto sm:w-auto justify-center text-2xl md:text-4xl font-bold border-b-2 border-y-2 border-black'>BambooShoots
