@@ -51,8 +51,7 @@ export default function ProfileLayout({children}) {
           }).then(() => {
             setfinishUploading(true);
             setFiles([]);
-            setSelectedFiles(false);
-
+            
           })
           
         }
@@ -63,6 +62,7 @@ export default function ProfileLayout({children}) {
       });
       setTimeout(() => {
         setfinishUploading(false);
+        setSelectedFiles(false);
       }, 1500);
     }
   }
