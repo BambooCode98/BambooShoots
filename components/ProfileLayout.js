@@ -21,7 +21,7 @@ export default function ProfileLayout({children}) {
   const [profilePicture, setProfilePicture] = useState(true);
   const [selectedFiles, setSelectedFiles] = useState(false);
   const [fileSelected, setFileSelected] = useState(true)
-  const [finshUploading, setfinishUploading] =  useState(false)
+  const [finishUploading, setfinishUploading] =  useState(false)
 
   function userDisplay() {
     if(modalDisplay === noDisplay) {
