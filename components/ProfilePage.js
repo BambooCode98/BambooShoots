@@ -25,14 +25,14 @@ export default function ProfilePage() {
         await fetch('/api/changeuserpic', {
           method: 'POST',
           body: imageBinary
+        }).then(() => {
+          window.location.reload();
         })
-        
       }
       reader.onerror = async () => {
         console.log(reader.error);
       }
     });
-    window.location.reload();    
   }
 
   function handleFiles(e) {
