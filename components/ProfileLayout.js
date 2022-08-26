@@ -48,9 +48,9 @@ export default function ProfileLayout({children}) {
             body: imageBinary
           })
         }
-        reader.onerror = () => {
+        reader.onerror = (error) => {
           // console.log(reader.error);
-          setReaderError(reader.error);
+          setReaderError(error);
         }
       });
       location.href='https://bamboo-shoots.vercel.app/account/photo';    
@@ -125,7 +125,7 @@ export default function ProfileLayout({children}) {
             <label className='cursor-pointer border-r-2 sm:border-b-0 border-black pr-1 sm:pr-2 text-center lg:pr-2 hover:text-gray-400 transition duration-300 ease-in-out' htmlFor='file'>
               Add Photos+
             </label>
-            <button type='button' className='border-l-2 sm:border-t-0 border-black pl-1 sm:pl-2 lg:pl-2 hover:text-gray-400 transition duration-300 ease-in-out'>Upload Photos </button>
+            <button type='submit' className='border-l-2 sm:border-t-0 border-black pl-1 sm:pl-2 lg:pl-2 hover:text-gray-400 transition duration-300 ease-in-out'>Upload Photos </button>
             </form>
             { fileSelected ? null : <p className='absolute text-red-500 top-1/2 rounded-md'>Please Select An Image.</p> }
             <div className='overflow-auto text-xs sm:text-sm h-1/3 sm:h-4/6 md:h-2/6 lg:h-4/6'>
@@ -143,7 +143,7 @@ export default function ProfileLayout({children}) {
             {children}
           </div>
         </div>
-        <p className='absolute top-2/5 left-3/5'>{readerError}</p>
+        {/* <p className='absolute top-2/5 left-3/5'>{readerError}</p> */}
       </>
     )
   } else {
