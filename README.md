@@ -4,6 +4,14 @@ This is a basic photo uploading site that allows users to login/logout. While lo
 
 Currently hosted at Vercel: [BambooShoots](https://bamboo-shoots.vercel.app)
 
+### Created With:
+  1. Next.js
+  2. React
+  3. TailWindCSS
+  4. Prisma
+  5. Postgresql
+
+
 #### Current Problems(In Deployment Only)
 
-After deploying to Heroku, the app does not quite work as intended due to the max file upload size being roughly 50kb. However, on a rare occasion larger file sizes can get through. Since everything worked as intended in the local environment, I believe the way Heroku handles requests may be causing the submit events to fail quite often. Another possibility is that the requests are simply failing due to the larger file sizes being posted, and thus blocking the requests causing the Heroku router to time out.
+After deploying to Vercel, the max upload size in roughly 4.3mb. Due to this any requests will fail if the size is greater than 4.5mb.
